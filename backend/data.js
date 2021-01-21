@@ -9,6 +9,7 @@ export default {
       brand: "Nike",
       rating: 4.5,
       numReviews: 22,
+      countInStock: 0
     },
     {
       _id: "2",
@@ -19,6 +20,7 @@ export default {
       brand: "Lacoste",
       rating: 4.0,
       numReviews: 18,
+      countInStock: 1
     },
     {
       _id: "3",
@@ -29,6 +31,7 @@ export default {
       brand: "Nike",
       rating: 4.9,
       numReviews: 12,
+      countInStock: 3
     },
     {
       _id: "4",
@@ -39,6 +42,7 @@ export default {
       brand: "Gucci",
       rating: 4.5,
       numReviews: 10,
+      countInStock: 8
     },
     {
       _id: "5",
@@ -49,6 +53,7 @@ export default {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
+      countInStock: 3
     },
     {
       _id: "6",
@@ -59,6 +64,7 @@ export default {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
+      countInStock: 4
     },
     {
       _id: "7",
@@ -69,6 +75,7 @@ export default {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
+      countInStock: 8
     },
     {
       _id: "8",
@@ -79,6 +86,7 @@ export default {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
+      countInStock: 4
     },
   ],
 };
