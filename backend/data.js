@@ -82,7 +82,7 @@ export default {
       name: "Classic Shirt",
       category: "Shirts",
       image: "/images/d2.jpg",
-      price: 60,
+      price: 1,
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
