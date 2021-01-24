@@ -3,13 +3,15 @@ import thunk from "redux-thunk";
 import Cookies from "js-cookie";
 import { cartReducer } from "./reducers/cartReducers";
 import { productListReducer, productDetailsReducer } from "./reducers/productReducers";
+import { userSigninReducer } from "./reducers/userReducers";
 
 const cartItems = Cookies.getJSON("cartItems") || [];
 const initialState = { cart: {cartItems}};
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  userSignin: userSigninReducer
 });
 
 const composeEnhancers = (typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
