@@ -6,7 +6,7 @@ const signin = (email, password) => async (dispatch) => {
     dispatch({type: USER_SIGNIN_REQUEST, payload:{email, password}})
     try {
         const {data} = await Axios.post("/api/users/signin",{email, password})
-        dispatch({typ: USER_SIGNIN_SUCCESS, payload:data})
+        dispatch({type: USER_SIGNIN_SUCCESS, payload:data})
         Cookies.set('userInfo', JSON.stringify(data))
     } catch (error) {
         dispatch({type:USER_SIGNIN_FAIL, payload: error.message})

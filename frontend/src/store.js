@@ -6,7 +6,10 @@ import { productListReducer, productDetailsReducer } from "./reducers/productRed
 import { userSigninReducer } from "./reducers/userReducers";
 
 const cartItems = Cookies.getJSON("cartItems") || [];
-const initialState = { cart: {cartItems}};
+const userInfo = Cookies.getJSON("userInfo") || [];
+
+const initialState = { cart: {cartItems},userSignin: {userInfo}};
+
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,

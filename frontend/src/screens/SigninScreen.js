@@ -14,6 +14,7 @@ function SignScreen(props) {
 
     useEffect(() => {
         if(userInfo){
+            
             props.history.push("/")
         }
         
