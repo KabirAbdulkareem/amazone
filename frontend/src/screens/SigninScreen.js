@@ -55,11 +55,7 @@ function SignScreen(props) {
                 </li>
 
                 <li>
-                    New to amazone?
-                </li>
-
-                <li>
-                    <Link to="/register" className="button secondary text-center">Create your amazone account</Link>
+                    New to amazone? <Link to="/register">Sign-in</Link>
                 </li>
             </ul>
         </form>

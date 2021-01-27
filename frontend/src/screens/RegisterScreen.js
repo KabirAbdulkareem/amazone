@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { register } from "../actions/userActions";
 
 
-function userRegisterScreen(props) {
+function RegisterScreen(props) {
     
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -33,12 +33,20 @@ function userRegisterScreen(props) {
         <form onSubmit={submitHandler}>
             <ul className="form-container">
                 <li>
-                    <h2>Sign-In</h2>
+                    <h2>Create Account</h2>
                 </li>
                 <li>
                     {loading && <div>Loading...</div>}
                     {error && <div>{error}</div>}
                 </li>
+
+                <li>
+                    <label htmlFor="name">
+                        Name
+                    </label>
+                    <input type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}/>
+                </li>
+
                 <li>
                     <label htmlFor="email">
                         Email
@@ -54,15 +62,18 @@ function userRegisterScreen(props) {
                 </li>
 
                 <li>
+                    <label htmlFor="rePassword">
+                        Password
+                    </label>
+                    <input type="rePassword" name="rePassword" id="rePassword" onChange={(e) => setRePassword(e.target.value)}/>
+                </li>
+
+                <li>
                     <button type="submit" className="button button-primary">Signin</button>
                 </li>
 
                 <li>
-                    New to amazone?
-                </li>
-
-                <li>
-                    <Link to="/userRegister" className="button secondary text-center">Create your amazone account</Link>
+                    Already have an account? <Link to="/signin">Sign-in</Link>
                 </li>
             </ul>
         </form>
@@ -70,4 +81,4 @@ function userRegisterScreen(props) {
   );
 }
 
-export default userRegisterScreen;
+export default RegisterScreen;
