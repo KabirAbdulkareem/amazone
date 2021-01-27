@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
@@ -30,8 +30,7 @@ function App() {
           <div className="header-links">
             <a href="cart.html">Cart </a>
             {
-              userInfo ? <Link to="/profile">{userInfo.name}</Link> :
-              <Link to="/signin">Sign In</Link>
+              userInfo ? <Link to="/profile">{userInfo.name}</Link> : <Link to="/signin">Sign In</Link>
             }
             
           </div>

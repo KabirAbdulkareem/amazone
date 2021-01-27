@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { signin } from "../actions/userActions";
+import { register } from "../actions/userActions";
 
 
-function SignScreen(props) {
+function userRegisterScreen(props) {
     
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const userSignin = useSelector(state => state.userSignin)
-    const {loading, userInfo, error} = userSignin
+    const [rePassword, setRePassword] = useState('')
+    const userRegister = useSelector(state => state.userRegister)
+    const {loading, userInfo, error} = userRegister
     const dispatch = useDispatch();
 
     useEffect(() => {
         if(userInfo){
+            
             props.history.push("/")
         }
         
@@ -22,7 +25,7 @@ function SignScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(signin(email, password))
+        dispatch(register(name, email, password))
     }
 
   return (
@@ -59,7 +62,7 @@ function SignScreen(props) {
                 </li>
 
                 <li>
-                    <Link to="/register" className="button secondary text-center">Create your amazone account</Link>
+                    <Link to="/userRegister" className="button secondary text-center">Create your amazone account</Link>
                 </li>
             </ul>
         </form>
@@ -67,4 +70,4 @@ function SignScreen(props) {
   );
 }
 
-export default SignScreen;
+export default userRegisterScreen;
