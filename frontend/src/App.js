@@ -5,6 +5,7 @@ import "./App.css";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
+import ProductsScreen from "./screens/ProductsScreen";
 import userRegisterScreen from "./screens/RegisterScreen";
 import SignScreen from "./screens/SigninScreen";
 
@@ -52,6 +53,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/products" component={ProductsScreen} />
             <Route path="/signin" component={SignScreen} />
             <Route path="/register" component={userRegisterScreen} />
             <Route path="/product/:id" component={ProductScreen} />
